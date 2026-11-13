@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://cu6t5xaaq0h5u"]
+
+[ext_resource type="Texture2D" uid="uid://diwy62cd1bhnd" path="res://PackLab_ico.png" id="1_uubjt"]
+[ext_resource type="Texture2D" uid="uid://dnfeui6skxy1w" path="res://start_button_idle.png" id="2_cx167"]
+[ext_resource type="Texture2D" uid="uid://tlq6a5jio3xy" path="res://start_button_clicked.png" id="3_dolsu"]
+[ext_resource type="Texture2D" uid="uid://ct4dgtmi82ru7" path="res://start_button_entered.png" id="4_n4eug"]
+[ext_resource type="Script" uid="uid://cawmtt5qwls4e" path="res://lab_start.gd" id="5_dlksc"]
+[ext_resource type="AudioStream" uid="uid://irwc3s8v1q4u" path="res://menu_music.mp3" id="5_dolsu"]
+[ext_resource type="Script" uid="uid://ch8ch7h6bdh31" path="res://texture_button_2.gd" id="6_5p1lm"]
+[ext_resource type="PackedScene" uid="uid://ngrqr8vcqjlg" path="res://menu_ball.tscn" id="6_n4eug"]
+[ext_resource type="PackedScene" uid="uid://b7gdd5rxaaofc" path="res://menu_ball_white.tscn" id="8_hcwhg"]
+[ext_resource type="Texture2D" uid="uid://pdjddgxappid" path="res://images.png" id="10_1igrg"]
+[ext_resource type="Script" uid="uid://cfg00wgcas2ll" path="res://texture_button_4.gd" id="11_v0s1l"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_lthh4"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_ylpcl"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_hcwhg"]
+
+[node name="Node2D" type="Node2D" unique_id=1875763989]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=2015036655]
+modulate = Color(0.16862746, 0.13725491, 0.21960784, 1)
+position = Vector2(812.3843, 452.58594)
+scale = Vector2(-1640.2917, 915.0676)
+mesh = SubResource("QuadMesh_lthh4")
+
+[node name="PackLabIco" type="Sprite2D" parent="." unique_id=1619077205]
+z_index = 2
+position = Vector2(418.00003, 459.00003)
+scale = Vector2(1.3907164, 1.4104307)
+texture = ExtResource("1_uubjt")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=72668366]
+modulate = Color(0.09803922, 0.08627451, 0.12941177, 1)
+z_index = 2
+position = Vector2(1176.9999, 197.00002)
+scale = Vector2(-367.1402, 437.1875)
+mesh = SubResource("TorusMesh_ylpcl")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="." unique_id=1170620271]
+modulate = Color(0.09803922, 0.08627451, 0.12941177, 1)
+z_index = 2
+position = Vector2(1431.8549, 198.67249)
+scale = Vector2(-210.92453, 106.602844)
+mesh = SubResource("QuadMesh_hcwhg")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=811095329]
+modulate = Color(0.09803922, 0.08627451, 0.12941177, 1)
+z_index = 2
+position = Vector2(1170.7128, 457.3592)
+scale = Vector2(-315.71274, 445.43677)
+mesh = SubResource("TorusMesh_ylpcl")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="." unique_id=1899471592]
+modulate = Color(0.09803922, 0.08627451, 0.12941177, 1)
+z_index = 2
+position = Vector2(1119.8401, 704.25867)
+scale = Vector2(-267.84006, 357.03476)
+mesh = SubResource("TorusMesh_ylpcl")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1355388724]
+z_index = 2
+offset_left = 1326.0
+offset_top = 158.0
+offset_right = 1358.2543
+offset_bottom = 174.0
+scale = Vector2(5.3749466, 4.6631746)
+texture_normal = ExtResource("2_cx167")
+texture_pressed = ExtResource("3_dolsu")
+texture_hover = ExtResource("4_n4eug")
+script = ExtResource("5_dlksc")
+
+[node name="TextureButton2" type="TextureButton" parent="." unique_id=1962773084]
+z_index = 2
+offset_left = 1095.7126
+offset_top = 471.3592
+offset_right = 1127.9669
+offset_bottom = 487.3592
+scale = Vector2(5.3749466, 4.6631746)
+texture_normal = ExtResource("2_cx167")
+texture_pressed = ExtResource("3_dolsu")
+texture_hover = ExtResource("4_n4eug")
+script = ExtResource("6_5p1lm")
+
+[node name="Label" type="Label" parent="." unique_id=1317764094]
+offset_left = 10.0
+offset_top = 869.0
+offset_right = 295.0
+offset_bottom = 892.0
+scale = Vector2(1.1873609, 1.1879038)
+text = "PackLab, made by: Oleksiy Klymenko"
+
+[node name="Label2" type="Label" parent="." unique_id=594273221]
+z_index = 2
+offset_left = 870.0
+offset_top = 132.00002
+offset_right = 1155.0
+offset_bottom = 155.00002
+scale = Vector2(5.1767373, 4.9691877)
+text = "Classic Lab"
+
+[node name="Label3" type="Label" parent="." unique_id=2055817562]
+z_index = 2
+offset_left = 908.71277
+offset_top = 355.35922
+offset_right = 1193.7128
+offset_bottom = 378.35922
+scale = Vector2(5.1767373, 4.9691877)
+text = "Adaptive Lab"
+
+[node name="Label4" type="Label" parent="." unique_id=1970792733]
+z_index = 2
+offset_left = 883.00006
+offset_top = 631.0
+offset_right = 1168.0
+offset_bottom = 680.0
+scale = Vector2(1.6511034, 1.6600187)
+text = "Ви мене можете знайти також на"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1527076535]
+position = Vector2(788, 438)
+stream = ExtResource("5_dolsu")
+volume_db = -3.055
+autoplay = true
+parameters/looping = true
+
+[node name="Menu_ball2" parent="." unique_id=2070777082 instance=ExtResource("6_n4eug")]
+position = Vector2(54, 71)
+
+[node name="Menu_ball3" parent="." unique_id=1268053688 instance=ExtResource("6_n4eug")]
+position = Vector2(1571.9999, 828)
+
+[node name="Menu_ball" parent="." unique_id=613164670 instance=ExtResource("8_hcwhg")]
+position = Vector2(815.99994, 447.00003)
+
+[node name="Menu_ball4" parent="." unique_id=219893644 instance=ExtResource("8_hcwhg")]
+position = Vector2(92, 823)
+
+[node name="Menu_ball5" parent="." unique_id=1531395226 instance=ExtResource("6_n4eug")]
+position = Vector2(1562, 51)
+
+[node name="TextureButton4" type="TextureButton" parent="." unique_id=526775829]
+z_index = 13
+offset_left = 987.84
+offset_top = 675.25867
+offset_right = 1356.8401
+offset_bottom = 811.25867
+scale = Vector2(0.70400727, 0.71115875)
+texture_normal = ExtResource("10_1igrg")
+texture_pressed = ExtResource("10_1igrg")
+texture_hover = ExtResource("10_1igrg")
+texture_disabled = ExtResource("10_1igrg")
+texture_focused = ExtResource("10_1igrg")
+script = ExtResource("11_v0s1l")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
+[connection signal="pressed" from="TextureButton2" to="TextureButton2" method="_on_pressed"]
